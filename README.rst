@@ -37,8 +37,8 @@ Installation
 
 ::
 
-    git clone --depth=1 https://github.com/Guanrenfu/Arch-quick-install-and-config
-    Arch-quick-install-and-config/scripts/Arch-Linux-quick-install.sh
+    git clone --depth=1 https://github.com/K-Guan/Arch-quick-install-and-config
+    ./Arch-quick-install-and-config/scripts/Arch-Linux-quick-install.sh
 
 好了，之后根据提示做就可以了。
 
@@ -49,8 +49,9 @@ Installation
 
     pacman -S git fbterm wqy-microhei 
     fbterm
-    git clone --depth=1 https://github.com/Guanrenfu/Arch-quick-install-and-config
-    Arch-quick-install-and-config/scripts/Arch-Linux-quick-config.sh
+
+    git clone --depth=1 https://github.com/K-Guan/Arch-quick-install-and-config
+    ./Arch-quick-install-and-config/scripts/Arch-Linux-quick-config.sh
 
 *Enjoy your Arch Linux*
 
