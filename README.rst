@@ -54,17 +54,3 @@ Installation
     ./Arch-quick-install-and-config/scripts/Arch-Linux-quick-config.sh
 
 *Enjoy your Arch Linux*
-
-
-============
-Announcement
-============
-
-
-1. 本人所有项目迁移至本帐号 *K-Guan* 的名下。
-
-2. 抛弃使用release文件夹的方式，开发版本请在dev分支提交。
-
-3. 因Kali 2.0的发布，故取消快速配置Kali的脚本。项目正式更名为： **Arch-quick-install-and-config**
-
-4. 从现在起README使用reStructuredText编写。
