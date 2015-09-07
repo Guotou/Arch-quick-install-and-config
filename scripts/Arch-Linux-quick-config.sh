@@ -70,7 +70,7 @@ function chinease
 	EOF
 
 	read -p "现在请输入您的选择(Y/n)：" zh
-	if [[ ${zh} == [Yy]]];then
+	if [[ ${zh} == [Yy] ]];then
 
 cat >> continue.sh << cEOF
 cat >> ~/.xinitrc << EOF
@@ -82,8 +82,9 @@ export LC_CTYPE=en_US.UTF-8
 EOF
 cEOF
 
-	elif [[${zh} == [Nn] ]];then
+	elif [[ ${zh} == [Nn] ]];then
 		echo "不设置中文" >> continue.sh
+	fi
 }
 
 
