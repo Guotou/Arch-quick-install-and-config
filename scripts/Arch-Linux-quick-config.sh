@@ -431,9 +431,11 @@ clear
 
 
 echo -e "现在，我们可以开始安装浏览器了：我们当前提供有firefox、opera和chromium\n"
+echo -e "请注意，chromium浏览器使用的pepper-flash插件需要yaourt才能安装\n"
 
 echo "# 安装网页浏览器" >> continue.sh
 echo "sudo pacman -S --noconfirm flashplugin" >> continue.sh
+echo "yaourt -S chromium-pepper-flash" >> continue.sh
 
 echo
 chooseSoftware 'firefox' 'opera' 'chromium' '不安装网页浏览器'
