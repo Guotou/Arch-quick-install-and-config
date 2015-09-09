@@ -33,7 +33,7 @@ softwareInstallCmd['smplayer']='sudo pacman -S --noconfirm smplayer'
 softwareInstallCmd['vlc']='sudo pacman -S --noconfirm vlc'
 softwareInstallCmd['mpv']='sudo pacman -S --noconfirm mpv'
 softwareInstallCmd['firefox']='sudo pacman -S --noconfirm firefox'
-softwareInstallCmd['chromium']='sudo pacman -S --noconfirm firefox'
+softwareInstallCmd['chromium']='sudo pacman -S --noconfirm chromium'
 softwareInstallCmd['opera']='sudo pacman -S --noconfirm opera'
 # 桌面环境
 softwareInstallCmd['gnome']='sudo pacman -S --noconfirm gnome'
