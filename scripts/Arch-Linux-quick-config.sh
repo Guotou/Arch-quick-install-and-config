@@ -431,12 +431,8 @@ clear
 
 
 echo -e "现在，我们可以开始安装浏览器了：我们当前提供有firefox、opera和chromium\n"
-echo -e "请注意，chromium浏览器使用的pepper-flash插件需要yaourt才能安装\n"
 
 echo "# 安装网页浏览器" >> continue.sh
-echo "sudo pacman -S --noconfirm flashplugin" >> continue.sh
-echo "yaourt -S chromium-pepper-flash" >> continue.sh
-
 echo
 chooseSoftware 'firefox' 'opera' 'chromium' '不安装网页浏览器'
 clear
@@ -449,6 +445,28 @@ if [ ${choose} == 'firefox' ];then
         echo "sudo pacman -S --noconfirm firefox-i18n-zh-cn" >> continue.sh
     fi
 fi
+
+echo "请问您是否要安装Flash？如果不安装Flash的话页面可能会有些元素无法显示。"
+read -n1 -p "请输入Y/N：" flash
+if [[ ${flash} == [Yy] ]];then
+	if [ ${choose} == 'firefox' ];then
+		echo "sudo pacman -S --noconfirm flashplugin" >> continue.sh
+	elif [ ${choose} == 'firefox' ];then
+		echo "sudo pacman -S --noconfirm flashplugin" >> continue.sh
+	elif [ ${choose} == 'chromium' ];then
+		cat >> continue.sh <<- EOF
+		wget https://aur.archlinux.org/cgit/aur.git/snapshot/chromium-pepper-flash.tar.gz
+		tar -zxvf chromium-pepper-flash.tar.gz
+		rm -f chromium-pepper-flash.tar.gz
+		cd chromium-pepper-flash
+		makepkg -sri --noconfirm
+		cd ..
+		rm -rf chromium-pepper-flash
+		EOF
+else
+	echo "不安装Flash" >> continue.sh
+fi
+
 echo >> continue.sh
 clear
 
