@@ -12,7 +12,7 @@ Installation
 ------------
 
 
-首先是Arch-Linux-quick-install，这是一个快速安装Arch Linux的脚本。请确保您正在使用 *root* 用户。
+首先是Arch-Linux-quick-install，这是一个快速安装Arch Linux的脚本。请确保您正在使用 *root* 用户，以及已经联网。
 
 然后您需要安装下列程序并运行fbterm，全部的命令像这样：
 
