@@ -69,4 +69,4 @@ Tip:
 
 2. fbterm对虚拟机支持并不好，请不要在虚拟机中使用此脚本。
 
-3. 如果在安装fbterm和git等软件时发现速度太慢，可以参考wiki的[这个部分](https://wiki.archlinux.org/index.php/Beginners%27_guide_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#.E9.80.89.E6.8B.A9.E5.AE.89.E8.A3.85.E9.95.9C.E5.83.8F)更改软件源。
+3. 如果在安装fbterm和git等软件时发现速度太慢，可以参考wiki的 *选择安装镜像* 部分更改软件源。
