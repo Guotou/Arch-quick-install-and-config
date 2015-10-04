@@ -19,64 +19,9 @@ if [ ${UID} != 0 ];then
 fi
 
 clear
-
-cat <<- EOF
-欢迎使用Linux-quick-install-or-config
-
-在您使用本脚本之前，请先详细阅读此文章：
-https://wiki.archlinux.org/index.php/Beginners%27_guide
-
-另外本脚本当前仅支持BIOS+MBR的电脑，如果您的电脑为UEFI引导
-那么很抱歉本脚本暂时不能帮助您正常安装Arch，请开启兼容模式或是自行安装Arch
-
-如果您使用的是BIOS引导的电脑或是已经开启兼容模式，那么请按回车继续。
-
-EOF
-
-read var
-clear
-
-cat <<- EOF
-首先，请您先确保您的已经连接网络：
-
-如果您已经成功连接网络，请按1
-
-如果您打算手动配置网络，请按2
-(当然您也可以使用这种方式检查您的网络连接状况)
-
-如果您打算使用wifi-menu，请按3
-(此方法适用于wifi用户)
-EOF
-
-while [[ ${network} != Done ]]
-do
-	select network in "Done" "manual" "wireless"
-	do
-		break
-	done
-
-	case ${network} in
-		"Done")
-			systemctl restart dhcpcd.service > /dev/null 2>&1
-			;;
-		"manual")
-			zsh
-			;;
-		"wireless")
-			wifi-menu
-			;;
-		*)
-			echo -e "\e[31m\e[1m选择错误，请重试。\e[0m"
-	esac
-done
-clear
-
 cat << EOF
-现在您需要手动进行分区，我们当前并没有自动分区的功能
+首先，请您手动进行分区，我们当前并没有自动分区的功能
 当您结束分区后，请按<Ctrl+D>以终止。
-
-您可以在这里找到怎样使用命令行工具来分区
-https://wiki.archlinux.org/index.php/Beginners%27_guide#Prepare_the_storage_devices
 
 
 EOF
